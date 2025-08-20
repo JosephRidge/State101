@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state101/pages/secondPage/second_page.dart';
 import 'package:state101/utility/providers/numbers_provider.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SecondPage extends StatefulWidget {
+  const SecondPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SecondPage> createState() => _SecondPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Consumer<NumbersProvider>(
-      builder: (context, numbersProvider, child) {
+      builder: (context, numbersProvider, child){
         return Scaffold(
           appBar: AppBar(backgroundColor: Colors.amber),
           body: Column(
@@ -50,28 +49,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              FloatingActionButton(
-                onPressed: () {
-                  numbersProvider.increment();
-                },
-                child: Icon(Icons.add),
-              ),
-              SizedBox(height: 10),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (context) =>
-                          SecondPage(),
-                    ),
-                  );
-                },
-                icon: Icon(Icons.next_plan),
-              ),
-            ],
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              numbersProvider.increment();
+            },
+            child: Icon(Icons.add),
           ),
         );
       },
