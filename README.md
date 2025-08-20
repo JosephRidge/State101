@@ -1,5 +1,14 @@
 # state101
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+
+[Ephemeral vs App State](https://docs.flutter.dev/data-and-backend/state-mgmt/ephemeral-vs-app)
+[Declarative UI](https://docs.flutter.dev/get-started/flutter-for/declarative)
+
+
 A new Flutter project.
 
 ## Getting Started
