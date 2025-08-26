@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  
   @override
   Widget build(BuildContext context) {
     return Consumer<NumbersProvider>(
@@ -63,10 +64,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 onPressed: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (context) =>
-                          SecondPage(),
-                    ),
+                    MaterialPageRoute<void>(builder: (context) => SecondPage()),
                   );
                 },
                 icon: Icon(Icons.next_plan),
